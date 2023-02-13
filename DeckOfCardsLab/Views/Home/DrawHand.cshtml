@@ -1,0 +1,18 @@
+﻿@model DeckOfCardsModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+    if (Model != null)
+    {
+    <button onClick="window.location.reload();">Draw again</button><br /><br />
+
+    foreach (Card card in Model.cards)
+    {
+        <img src="@card.image" width="150"/>
+        <p>@card.value of @card.suit</p>
+    }
+
+    }
+}
